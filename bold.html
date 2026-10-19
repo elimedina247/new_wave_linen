@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="New Wave Linen Supply delivers crisp, hygienically clean linens to hotels, resorts, vacation rentals, and restaurants in Atlanta, Myrtle Beach, and Charleston.">
+<title>New Wave Linen Supply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..900&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root {
+  --night: #0b1622;
+  --night-2: #12202f;
+  --night-3: #1a2b3d;
+  --cloth: #f3f1ec;
+  --cloth-dim: #aeb6c2;
+  --line: #27394d;
+  --gold: #d9b35a;
+  --gold-deep: #b8923a;
+  --display: "Archivo", "Arial Narrow", Impact, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  --gutter: clamp(16px, 5vw, 72px);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--cloth);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 {
+  font-family: var(--display);
+  margin: 0;
+  line-height: 0.98;
+  text-wrap: balance;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(3rem, 9vw, 7.5rem); font-weight: 900; font-variation-settings: "wdth" 80; }
+h2 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 800; font-variation-settings: "wdth" 85; }
+h3 { font-size: 1.3rem; font-weight: 700; font-variation-settings: "wdth" 90; letter-spacing: 0.02em; }
+p { margin: 0; max-width: 60ch; }
+a { color: var(--gold); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.wrap { padding-inline: var(--gutter); max-width: 1240px; margin-inline: auto; }
+.tag {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-left: 3px solid var(--gold);
+  padding-left: 0.7rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.7rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--cloth);
+  color: var(--cloth);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn:hover { background: var(--cloth); color: var(--night); }
+.btn.gold { background: var(--gold); border-color: var(--gold); color: var(--night); }
+.btn.gold:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
+
+header.top {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: color-mix(in srgb, var(--night) 90%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1rem; flex-wrap: wrap; }
+.brand { font-family: var(--display); font-weight: 900; font-size: 1.2rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--cloth); text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
+.brand i { width: 12px; height: 12px; background: var(--gold); display: inline-block; transform: rotate(45deg); }
+nav.main { display: flex; gap: 1.6rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+nav.main a { color: var(--cloth-dim); text-decoration: none; }
+nav.main a:hover { color: var(--gold); }
+.phone-link { font-family: var(--display); font-weight: 700; color: var(--gold); text-decoration: none; letter-spacing: 0.04em; }
+
+.hero {
+  position: relative;
+  border-bottom: 1px solid var(--line);
+  background:
+    repeating-linear-gradient(135deg, transparent 0 22px, color-mix(in srgb, var(--cloth) 4%, transparent) 22px 23px);
+}
+.hero .wrap { padding-block: clamp(4rem, 10vw, 8rem) clamp(3rem, 8vw, 6rem); display: grid; gap: 2rem; }
+.hero .tag { margin-bottom: 1.6rem; }
+.hero h1 span { color: var(--gold); }
+.hero .lede { font-size: 1.25rem; color: var(--cloth-dim); max-width: 48ch; }
+.hero .row { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.hero .meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  border-top: 1px solid var(--line);
+  margin-top: 1.5rem;
+}
+.hero .meta div { padding: 1.2rem 1.2rem 1.2rem 0; border-right: 1px solid var(--line); min-width: 0; }
+.hero .meta div:last-child { border-right: 0; }
+.hero .meta div + div { padding-left: 1.2rem; }
+.hero .meta b { display: block; font-family: var(--display); font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+.hero .meta span { color: var(--cloth); font-size: 1rem; }
+
+section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+section.alt { background: var(--night-2); border-block: 1px solid var(--line); }
+.head { display: grid; gap: 1rem; margin-bottom: 3rem; }
+
+.reasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem 2.5rem; }
+.reason { display: grid; gap: 0.8rem; align-content: start; min-width: 0; }
+.reason .rule { height: 4px; width: 56px; background: var(--gold); }
+.reason p { color: var(--cloth-dim); font-size: 1rem; }
+
+.programs { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+.program { background: var(--night-3); padding: 2.4rem; display: grid; gap: 1.6rem; min-width: 0; border-top: 6px solid var(--gold); }
+.program h3 { font-size: 1.9rem; font-weight: 800; }
+.program > p { color: var(--cloth-dim); }
+.program ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.program li { display: grid; grid-template-columns: 10px 1fr; gap: 1rem; align-items: start; font-size: 1rem; }
+.program li::before { content: ""; width: 10px; height: 10px; background: var(--gold); margin-top: 0.5rem; }
+.program li strong { display: block; font-family: var(--display); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.9rem; }
+.program li span { color: var(--cloth-dim); }
+
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border: 1px solid var(--line); }
+.step { padding: 2rem; border-right: 1px solid var(--line); display: grid; gap: 1rem; align-content: start; min-width: 0; }
+.step:last-child { border-right: 0; }
+.step .num { font-family: var(--display); font-weight: 900; font-size: 5rem; line-height: 1; color: var(--gold); font-variant-numeric: tabular-nums; }
+.step p { color: var(--cloth-dim); font-size: 1rem; }
+
+.areas .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
+.areas ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.areas li { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase; line-height: 1; padding-block: 1.1rem; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.areas li:first-child { border-top: 1px solid var(--line); }
+.areas li small { font-family: var(--body); font-weight: 500; font-size: 0.85rem; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; }
+.areas p { color: var(--cloth-dim); margin-top: 1rem; }
+
+.cta { background: var(--gold); color: var(--night); }
+.cta .wrap { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3rem; align-items: start; }
+.cta .tag { color: var(--night); border-color: var(--night); }
+.cta p { color: color-mix(in srgb, var(--night) 80%, var(--gold)); }
+.contact { display: grid; gap: 1rem; margin-top: 1.6rem; }
+.contact a { font-family: var(--display); font-weight: 800; font-size: 1.6rem; color: var(--night); text-decoration: none; letter-spacing: 0.02em; }
+.contact b { display: block; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; }
+form { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; background: var(--night); padding: 2rem; color: var(--cloth); }
+form .full { grid-column: 1 / -1; }
+label { display: grid; gap: 0.4rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cloth-dim); min-width: 0; }
+input, select, textarea { font: inherit; font-size: 1rem; text-transform: none; letter-spacing: 0; padding: 0.75rem 0.9rem; border: 1px solid var(--line); background: var(--night-2); color: var(--cloth); width: 100%; min-width: 0; border-radius: 0; }
+textarea { min-height: 120px; resize: vertical; }
+.form-foot { grid-column: 1 / -1; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.form-foot small { color: var(--cloth-dim); }
+.summary { grid-column: 1 / -1; border: 1px solid var(--gold); padding: 1.2rem; display: grid; gap: 0.8rem; }
+.summary strong { font-family: var(--display); letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.85rem; color: var(--gold); }
+.summary pre { margin: 0; white-space: pre-wrap; font: 0.9rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-x: auto; }
+.summary .row { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+.summary .row small { color: var(--cloth-dim); }
+.summary .btn { padding: 0.6rem 1rem; font-size: 0.8rem; }
+
+footer { padding-block: 2rem; font-size: 0.85rem; color: var(--cloth-dim); border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+@media (max-width: 860px) {
+  .areas .wrap, .cta .wrap { grid-template-columns: 1fr; }
+  form { grid-template-columns: 1fr; padding: 1.4rem; }
+  nav.main { display: none; }
+  .step { border-right: 0; border-bottom: 1px solid var(--line); }
+  .step:last-child { border-bottom: 0; }
+  .hero .meta div { border-right: 0; border-bottom: 1px solid var(--line); padding-left: 0; }
+  .hero .meta div + div { padding-left: 0; }
+  .hero .meta div:last-child { border-bottom: 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>New Wave Linen</a>
+    <nav class="main" aria-label="Sections">
+      <a href="#why">Why us</a>
+      <a href="#programs">Programs</a>
+      <a href="#how">Process</a>
+      <a href="#areas">Areas</a>
+      <a href="#quote">Quote</a>
+    </nav>
+    <a class="phone-link" href="tel:+18439576632">843-957-6632</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag">Premium hotel &amp; restaurant linen rentals</span>
+        <h1>Never worry<br>about inventory<br><span>again.</span></h1>
+      </div>
+      <p class="lede">We deliver crisp, hygienically clean linens directly to your hospitality or food service business on a schedule that fits your operations. Reduce your overhead, eliminate laundry labor, and impress your guests.</p>
+      <div class="row">
+        <a class="btn gold" href="#quote">Schedule a free consultation</a>
+        <a class="btn" href="#quote">Get a custom quote</a>
+      </div>
+      <div class="meta">
+        <div><b>Who we serve</b><span>Hotels, resorts, vacation rentals, restaurants and fine dining</span></div>
+        <div><b>Service areas</b><span>Atlanta, GA · Myrtle Beach, SC · Charleston, SC</span></div>
+        <div><b>Pricing</b><span>Flat-rate programs. No hidden fees.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="head">
+        <span class="tag">Why hospitality leaders choose us</span>
+        <h2>Built for the morning your doors open.</h2>
+      </div>
+      <div class="reasons">
+        <div class="reason"><span class="rule"></span><h3>Pristine quality assurance</h3><p>Every sheet, tablecloth, and napkin undergoes a rigorous, multi-point inspection and sanitization process to exceed industry hygiene standards.</p></div>
+        <div class="reason"><span class="rule"></span><h3>Flexible inventory management</h3><p>Scale your deliveries up or down dynamically based on seasonal occupancy or peak restaurant weekends.</p></div>
+        <div class="reason"><span class="rule"></span><h3>On-time delivery guarantee</h3><p>We operate a reliable local fleet to ensure your staff always has the inventory they need before your doors open.</p></div>
+        <div class="reason"><span class="rule"></span><h3>Transparent pricing</h3><p>No hidden sorting fees, no surprise fuel surcharges. Just predictable, flat-rate linen programs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="programs">
+    <div class="wrap">
+      <div class="head">
+        <span class="tag">Our linen rental programs</span>
+        <h2>Two programs. One standard.</h2>
+      </div>
+      <div class="programs">
+        <article class="program">
+          <h3>Restaurant &amp; fine dining</h3>
+          <p>Set the perfect table with high-quality fabrics engineered to resist stains and hold a crisp fold.</p>
+          <ul>
+            <li><div><strong>Table linen</strong><span>Tablecloths and overlays in standard sizes, fine fabrics, and a wide array of colors.</span></div></li>
+            <li><div><strong>Napkins</strong><span>Premium cotton and spun-polyester napkins that feel great and look immaculate.</span></div></li>
+            <li><div><strong>Back-of-house</strong><span>Heavy-duty chef coats, cook shirts, butcher aprons, and professional kitchen towels.</span></div></li>
+          </ul>
+        </article>
+        <article class="program">
+          <h3>Hotels, resorts &amp; vacation rentals</h3>
+          <p>Give your guests a luxury, five-star sleep experience with retail-grade bed and bath programs.</p>
+          <ul>
+            <li><div><strong>Bed linens</strong><span>High-thread-count flat sheets, fitted sheets, pillowcases, and premium duvet covers.</span></div></li>
+            <li><div><strong>Bath linens</strong><span>Plush, highly absorbent bath towels, hand towels, washcloths, and bath mats.</span></div></li>
+            <li><div><strong>Pool &amp; spa</strong><span>Durable, chlorine-resistant pool towels available in resort-style colors or classic white.</span></div></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="head">
+        <span class="tag">How our managed service works</span>
+        <h2>From first call to full closet in three steps.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><h3>Custom consultation</h3><p>We analyze your weekly turn rates, occupancy patterns, and fabric preferences to build a tailored inventory baseline.</p></div>
+        <div class="step"><span class="num">2</span><h3>Setup &amp; delivery</h3><p>We supply your initial inventory fresh and ready for immediate deployment, setting up designated drop-off and pickup areas.</p></div>
+        <div class="step"><span class="num">3</span><h3>Seamless rotation</h3><p>On your scheduled service days, our driver collects used linens and instantly replenishes them with a fresh, crisp supply.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt areas" id="areas">
+    <div class="wrap">
+      <div>
+        <span class="tag">Service areas</span>
+        <h2 style="margin-top:1rem">Proudly serving the Southeast.</h2>
+        <p>Our local fleet runs scheduled routes in three regions. Not sure whether your property is on a route? Ask and we will tell you.</p>
+      </div>
+      <ul>
+        <li>Atlanta, GA <small>Metro area</small></li>
+        <li>Myrtle Beach, SC <small>Grand Strand</small></li>
+        <li>Charleston, SC <small>Lowcountry</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta" id="quote">
+    <div class="wrap">
+      <div>
+        <span class="tag">Ready to upgrade your linen service?</span>
+        <h2 style="margin-top:1rem">Let us handle the laundry.</h2>
+        <p style="margin-top:1rem">Focus on your guests. Contact our commercial team for a transparent price estimate, or send the form and we will follow up within one business day.</p>
+        <div class="contact">
+          <div><b>Phone</b><a href="tel:+18439576632">843-957-6632</a></div>
+          <div><b>Email</b><a href="mailto:info@newwavelinen.com">info@newwavelinen.com</a></div>
+        </div>
+      </div>
+      <form id="quote-form" novalidate>
+        <label>Business name<input id="q-business" name="business" type="text" autocomplete="organization" required></label>
+        <label>Business type
+          <select id="q-type" name="type">
+            <option>Restaurant or fine dining</option>
+            <option>Hotel or resort</option>
+            <option>Vacation rental</option>
+            <option>Other hospitality</option>
+          </select>
+        </label>
+        <label>Your name<input id="q-name" name="name" type="text" autocomplete="name" required></label>
+        <label>Phone<input id="q-phone" name="phone" type="tel" autocomplete="tel"></label>
+        <label class="full">Email<input id="q-email" name="email" type="email" autocomplete="email" required></label>
+        <label>Location
+          <select id="q-area" name="area">
+            <option>Atlanta, GA</option>
+            <option>Myrtle Beach, SC</option>
+            <option>Charleston, SC</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>Rooms or table seats<input id="q-size" name="size" type="text" placeholder="e.g. 80 rooms or 120 seats"></label>
+        <label class="full">What do you need?<textarea id="q-notes" name="notes" placeholder="Items, delivery frequency, current provider, anything else that helps us quote accurately."></textarea></label>
+        <div class="form-foot">
+          <button class="btn gold" type="submit">Request a quote</button>
+          <small>Opens a pre-filled email to info@newwavelinen.com.</small>
+        </div>
+        <div class="summary" id="summary" hidden>
+          <strong>Your request</strong>
+          <pre id="summary-text"></pre>
+          <div class="row">
+            <button class="btn" type="button" id="copy-btn">Copy details</button>
+            <small id="copy-note">If your email app did not open, paste this into a message to info@newwavelinen.com.</small>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>New Wave Linen Supply · Atlanta, GA · Myrtle Beach, SC · Charleston, SC</span>
+    <span>843-957-6632 · info@newwavelinen.com</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('quote-form');
+  var summary = document.getElementById('summary');
+  var summaryText = document.getElementById('summary-text');
+  var copyBtn = document.getElementById('copy-btn');
+  var copyNote = document.getElementById('copy-note');
+  var fields = [
+    ['Business', 'q-business'],
+    ['Type', 'q-type'],
+    ['Contact', 'q-name'],
+    ['Phone', 'q-phone'],
+    ['Email', 'q-email'],
+    ['Location', 'q-area'],
+    ['Size', 'q-size'],
+    ['Needs', 'q-notes']
+  ];
+
+  function buildText() {
+    return fields.map(function (f) {
+      var v = document.getElementById(f[1]).value.trim();
+      return v ? f[0] + ': ' + v : null;
+    }).filter(Boolean).join('\n');
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var text = buildText();
+    summaryText.textContent = text;
+    summary.hidden = false;
+    var business = document.getElementById('q-business').value.trim();
+    var href = 'mailto:info@newwavelinen.com?subject=' +
+      encodeURIComponent('Quote request from ' + business) +
+      '&body=' + encodeURIComponent(text);
+    window.location.href = href;
+    summary.scrollIntoView({ block: 'nearest' });
+  });
+
+  copyBtn.addEventListener('click', function () {
+    var text = summaryText.textContent;
+    function selectFallback() {
+      var range = document.createRange();
+      range.selectNodeContents(summaryText);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      copyNote.textContent = 'Text selected. Press Ctrl+C or Cmd+C to copy.';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        copyNote.textContent = 'Copied.';
+      }, selectFallback);
+    } else {
+      selectFallback();
+    }
+  });
+})();
+</script>
+</body>
+</html>
